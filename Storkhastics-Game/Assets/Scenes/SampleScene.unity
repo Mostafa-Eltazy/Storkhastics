@@ -203,20 +203,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 259686864}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.054519355, y: -0, z: -0, w: 0.9985128}
+  m_LocalPosition: {x: 0, y: 2.27, z: -3.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 385197485}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 6.2510004, y: 0, z: 0}
 --- !u!114 &259686866
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 259686864}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c81d3e8c5fd01d4482f2b25bac9e1c3, type: 3}
   m_Name: 
@@ -289,8 +289,10 @@ GameObject:
   - component: {fileID: 385197482}
   - component: {fileID: 385197486}
   - component: {fileID: 385197487}
+  - component: {fileID: 385197489}
+  - component: {fileID: 385197488}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Stork
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -358,7 +360,7 @@ Transform:
   m_GameObject: {fileID: 385197481}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -52.8, y: 4.2, z: -266.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2530217, y: 0.385661, z: 0.5966272}
   m_Children:
   - {fileID: 259686865}
   m_Father: {fileID: 0}
@@ -371,13 +373,13 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 385197481}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 0.8
+  m_Drag: 0.2
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &385197487
 MonoBehaviour:
@@ -390,11 +392,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37111869e25009e4a9e967343be8689d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 15
-  jumpheight: 4
+  movespeed: 5
+  jumpheight: 3
   body: {fileID: 0}
   groundcheck: {fileID: 0}
-  smooth: 1
+  smooth: 0.2
+--- !u!114 &385197488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 385197481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e52312caf72e544f8e1b0b34a302479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundcheck: {fileID: 385197482}
+  body: {fileID: 0}
+  alttitude: 2
+  glide: 4
+  gravity: -1
+  brake: 0
+  preparetoboost: 0
+  timeforboosting: 1
+  boostingforce: 75
+--- !u!114 &385197489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 385197481}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e95c444c5a0034384fe0847bd9c1b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundcheck: {fileID: 385197482}
+  body: {fileID: 385197486}
+  groundedhoveralttitude: 7
+  airbornhoveralttitude: 9
+  WingForce: 250
+  alttitude: 15
+  boostcounter: 0
+  wingrestinterval: 3
+  rest: 0
+  boost: 0
+  normalgravityeffect: -10
+  lightgravityeffect: -4
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
