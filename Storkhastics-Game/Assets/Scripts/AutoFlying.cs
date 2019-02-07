@@ -62,13 +62,8 @@ public class AutoFlying : MonoBehaviour
                 Debug.Log("jidsjfs");
                 boostingwindow = timeforboosting;
                 preparetoboost = true;
-
-
             } 
-            if (Input.GetKeyDown(KeyCode.DownArrow)&&!grounded)
-            {
-                Physics.gravity = new Vector3(0, 0, 0);
-            }
+           
             if (Input.GetKey(KeyCode.UpArrow))
             {
                 body.velocity = new Vector3(body.velocity.x, alttitude, body.velocity.z);
@@ -77,23 +72,12 @@ public class AutoFlying : MonoBehaviour
             {
                 body.velocity = new Vector3(body.velocity.x, -glide, body.velocity.z);
             }
-            if (Input.GetKeyDown(KeyCode.LeftArrow)&&!grounded)
-            {
-
-                
-                
-            }
-            if (Input.GetKeyDown(KeyCode.RightArrow)&&!grounded)
-            {
-                
-
-            }
+           
             if (Input.GetKey(KeyCode.C) && !grounded)
             {
                
                body.AddForce(-(transform.forward * (brake)), ForceMode.Force);
             }
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetrotation, 10 * (0.2f) * Time.deltaTime);
         }
     }
 

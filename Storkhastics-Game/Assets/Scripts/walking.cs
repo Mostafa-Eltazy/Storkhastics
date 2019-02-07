@@ -12,13 +12,13 @@ public class walking : MonoBehaviour {
     public Collider groundcheck;
     //////////////////////
     public float smooth;
-    private Quaternion targetrotation;
+    public float rotatespeed;
 	// Use this for initialization
 	void Start () {
 		
         body=GetComponent<Rigidbody>();
         groundcheck = GetComponent<Collider>();
-        targetrotation = transform.rotation;
+        
 	}
 	
 	// Update is called once per frame
@@ -33,20 +33,20 @@ public class walking : MonoBehaviour {
             transform.Translate(0, 0, vertical);
         }
         /////////////  Auto set up ///////////////////
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            targetrotation *= Quaternion.AngleAxis(45, Vector3.down);
+            //targetrotation *= Quaternion.AngleAxis(45, Vector3.down);
+            transform.Rotate(-Vector3.up * rotatespeed * Time.deltaTime);
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            targetrotation *= Quaternion.AngleAxis(45, Vector3.up);
+            
+          //  targetrotation *= Quaternion.AngleAxis(45, Vector3.up);
+            transform.Rotate(Vector3.up * rotatespeed * Time.deltaTime);
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow) && grounded)
-        {
-            targetrotation *= Quaternion.AngleAxis(90, Vector3.down);
-        }
+       
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetrotation, 10 * smooth * Time.deltaTime); 
+       // transform.rotation = Quaternion.Lerp(transform.rotation, targetrotation, 10 * smooth * Time.deltaTime); 
     //////////To rotate around it's own axis //
     //////////   Manual setup  ///////////////
     //    if (Input.GetKeyDown(KeyCode.LeftArrow))
