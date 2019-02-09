@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4682785534581142}
   - component: {fileID: 33190878135657422}
   - component: {fileID: 23790466200841242}
+  - component: {fileID: 64671140855895330}
   m_Layer: 0
   m_Name: skyscraperWithEntrance
   m_TagString: Untagged
@@ -92,4 +93,18 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1916431956837522}
+  m_Mesh: {fileID: 4300000, guid: 1a2bb4900f651a844961d62cb9c091e4, type: 3}
+--- !u!64 &64671140855895330
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1916431956837522}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 1a2bb4900f651a844961d62cb9c091e4, type: 3}
