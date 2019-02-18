@@ -13,8 +13,7 @@ public class AutoFlying : MonoBehaviour
     public float glide;
     public float gravity;
     public float brake;
-    public GameObject directionpoint;
-    private Quaternion targetrotation;
+    
     /////////////////////////////
     public bool preparetoboost;
     private float boostingwindow;
@@ -24,10 +23,9 @@ public class AutoFlying : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        body = FindObjectOfType<Rigidbody>();
+       
         preparetoboost = false;
         boostingwindow = timeforboosting;
-        targetrotation = transform.rotation;
     }
 
     // Update is called once per frame
