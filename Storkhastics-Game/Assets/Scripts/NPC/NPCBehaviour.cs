@@ -5,7 +5,12 @@ using UnityEngine;
 public class NPCBehaviour : MonoBehaviour {
 
     public Transform path;
-    public float maxsteerangle = 45f;
+    public float maxsteerangle;
+
+    public float maxtorque =80f;
+    public float currentspeed;
+    public float maxspeed = 100f;
+
     public WheelCollider wheelFL;
     public WheelCollider wheelFR;
 
@@ -28,7 +33,40 @@ public class NPCBehaviour : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         MotionalongPath();
+        Drive();
+        checkdistancetonode();
 	}
+
+    private void checkdistancetonode()
+    {
+        if (Vector3.Distance(transform.position, nodes[currentNode].position) < 2f) {
+
+            wheelFL.motorTorque = 10f;
+            wheelFR.motorTorque = 10f;
+            if (currentNode == nodes.Count - 1)
+            {
+
+                currentNode = 0;
+            }
+            else {
+                currentNode++;
+            }
+        }
+    }
+
+    private void Drive()
+    {
+        currentspeed = 2 * Mathf.PI * wheelFL.radius * wheelFL.rpm * 60 / 1000;
+        if (currentspeed < maxspeed)
+        {
+            wheelFL.motorTorque = maxtorque;
+            wheelFR.motorTorque = maxtorque;
+        }
+        else {
+            wheelFL.motorTorque = 0;
+            wheelFR.motorTorque = 0;
+        }
+    }
 
     private void MotionalongPath()
     {

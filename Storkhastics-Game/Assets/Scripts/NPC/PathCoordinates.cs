@@ -5,10 +5,10 @@ using UnityEngine;
 public class PathCoordinates : MonoBehaviour {
 
     public Color linecolor;
-    private List<Transform> nodes = new List<Transform>();
+    public List<Transform> nodes = new List<Transform>();
 
 
-    void OnDrawGizmosSelected() {
+    void OnDrawGizmos() {
 
         Gizmos.color = linecolor;
         Transform[] pathTransforms = GetComponentsInChildren<Transform>();
