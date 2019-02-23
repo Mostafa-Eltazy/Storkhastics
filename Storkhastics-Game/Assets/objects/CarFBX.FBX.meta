@@ -1,0 +1,231 @@
+fileFormatVersion: 2
+guid: 074a5925bd1f9ef4dbea5169e5b5ecf4
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Camera001
+    100002: Camera001.Target
+    100004: car-00
+    100006: car-01
+    100008: car-02
+    100010: car-03
+    100012: car-04
+    100014: car-05
+    100016: car-06
+    100018: car-07
+    100020: car-08
+    100022: car-09
+    100024: car-10
+    100026: car-11
+    100028: car-12
+    100030: car-13
+    100032: car-14
+    100034: car-15
+    100036: car-16
+    100038: car-17
+    100040: car-18
+    100042: car-19
+    100044: car-20
+    100046: car-21
+    100048: car-22
+    100050: car-23
+    100052: car-24
+    100054: car-25
+    100056: car-26
+    100058: //RootNode
+    100060: FDirect001
+    100062: Plane001
+    100064: Sky01
+    400000: Camera001
+    400002: Camera001.Target
+    400004: car-00
+    400006: car-01
+    400008: car-02
+    400010: car-03
+    400012: car-04
+    400014: car-05
+    400016: car-06
+    400018: car-07
+    400020: car-08
+    400022: car-09
+    400024: car-10
+    400026: car-11
+    400028: car-12
+    400030: car-13
+    400032: car-14
+    400034: car-15
+    400036: car-16
+    400038: car-17
+    400040: car-18
+    400042: car-19
+    400044: car-20
+    400046: car-21
+    400048: car-22
+    400050: car-23
+    400052: car-24
+    400054: car-25
+    400056: car-26
+    400058: //RootNode
+    400060: FDirect001
+    400062: Plane001
+    400064: Sky01
+    2000000: Camera001
+    2100000: matte
+    2100002: red metal
+    2100004: glass
+    2100006: black
+    2100008: aluminum
+    2100010: 09 - Default
+    2300000: car-01
+    2300002: car-02
+    2300004: car-03
+    2300006: car-05
+    2300008: car-06
+    2300010: car-08
+    2300012: car-09
+    2300014: car-11
+    2300016: car-12
+    2300018: car-13
+    2300020: car-14
+    2300022: car-15
+    2300024: car-16
+    2300026: car-18
+    2300028: car-19
+    2300030: car-20
+    2300032: car-21
+    2300034: car-22
+    2300036: car-23
+    2300038: car-24
+    2300040: car-26
+    2300042: Plane001
+    3300000: car-01
+    3300002: car-02
+    3300004: car-03
+    3300006: car-05
+    3300008: car-06
+    3300010: car-08
+    3300012: car-09
+    3300014: car-11
+    3300016: car-12
+    3300018: car-13
+    3300020: car-14
+    3300022: car-15
+    3300024: car-16
+    3300026: car-18
+    3300028: car-19
+    3300030: car-20
+    3300032: car-21
+    3300034: car-22
+    3300036: car-23
+    3300038: car-24
+    3300040: car-26
+    3300042: Plane001
+    4300000: Plane001
+    4300002: car-24
+    4300004: car-02
+    4300006: car-03
+    4300008: car-05
+    4300010: car-06
+    4300012: car-08
+    4300014: car-09
+    4300016: car-11
+    4300018: car-12
+    4300020: car-14
+    4300022: car-15
+    4300024: car-16
+    4300026: car-18
+    4300028: car-19
+    4300030: car-20
+    4300032: car-26
+    4300034: car-22
+    4300036: car-23
+    4300038: car-21
+    4300040: car-01
+    4300042: car-13
+    7400000: Take 001
+    9500000: //RootNode
+    10800000: FDirect001
+    10800002: Sky01
+    6000828045688606266: Camera001
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
