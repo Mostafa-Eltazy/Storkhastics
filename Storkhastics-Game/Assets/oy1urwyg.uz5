@@ -1,0 +1,66 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NPCHumenBehaviour : MonoBehaviour {
+
+    public Transform path;
+    public float maxsteerangle;
+
+   
+    public float currentspeed;
+    public float maxspeed = 100f;
+
+
+    public Rigidbody body;
+    private List<Transform> nodes;
+    
+    private int currentNode = 0;
+
+
+
+	// Use this for initialization
+	void Start () {
+
+        Transform[] pathTransforms = path.GetComponentsInChildren<Transform>();
+        nodes = new List<Transform>();
+
+        for (int i = 0; i < pathTransforms.Length; i++)
+        {
+            if (pathTransforms[i] != path.transform)
+            {
+                nodes.Add(pathTransforms[i]);
+            }
+        }
+	}
+	
+	// Update is called once per frame
+	void FixedUpdate () {
+        checkdistancetonode();
+        walking();
+	}
+    private void checkdistancetonode()
+    {
+        if (Vector3.Distance(transform.position, nodes[currentNode].position) < 2f)
+        {
+
+            
+            if (currentNode == nodes.Count - 1)
+            {
+
+                currentNode = 0;
+            }
+            else
+            {
+                currentNode++;
+            }
+            transform.LookAt(nodes[currentNode]);
+        }
+    }
+    private void walking() {
+
+
+        transform.position = Vector3.MoveTowards(transform.position, nodes[currentNode].position, 0.4f);
+    
+    }
+}
